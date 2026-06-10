@@ -1,33 +1,42 @@
-// Mostrar informações sobre culturas
-function showInfo(cultura) {
-    const infoBox = document.getElementById('info-box');
-    let info = '';
+function mostrarInfo(tipo){
 
-    switch(cultura) {
-        case 'soja':
-            info = 'A soja é uma cultura essencial para alimentos e biocombustíveis.';
-            break;
-        case 'milho':
-            info = 'O milho é versátil e sustentável quando cultivado corretamente.';
-            break;
-        case 'trigo':
-            info = 'O trigo é fundamental na alimentação global e na economia agrícola.';
-            break;
-        default:
-            info = '';
+    const info = document.getElementById("info");
+
+    if(tipo === "compostagem"){
+        info.innerHTML =
+        "<strong>Compostagem:</strong> transforma restos de alimentos em adubo natural, reduzindo o lixo e enriquecendo o solo.";
     }
 
-    infoBox.textContent = info;
+    if(tipo === "agua"){
+        info.innerHTML =
+        "<strong>Economia de Água:</strong> sistemas de captação da água da chuva ajudam na irrigação e diminuem o desperdício.";
+    }
+
+    if(tipo === "organico"){
+        info.innerHTML =
+        "<strong>Adubação Orgânica:</strong> utiliza materiais naturais para nutrir as plantas sem produtos químicos agressivos.";
+    }
+
+    if(tipo === "biodiversidade"){
+        info.innerHTML =
+        "<strong>Biodiversidade:</strong> diferentes espécies atraem polinizadores e fortalecem o equilíbrio ambiental.";
+    }
 }
 
-// Mudar tema claro/escuro
-document.getElementById('toggle-theme').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+function iniciarContador(){
 
-// Formulário de contato
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('form-msg').textContent = 'Mensagem enviada com sucesso!';
-    this.reset();
-});
+    let numero = 0;
+    const contador = document.getElementById("numero");
+
+    const intervalo = setInterval(() => {
+
+        numero++;
+
+        contador.textContent = numero;
+
+        if(numero >= 100){
+            clearInterval(intervalo);
+        }
+
+    }, 20);
+}
