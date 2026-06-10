@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - Futuro Sustentável</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#producoes">Produção</a></li>
+                <li><a href="#meioambiente">Meio Ambiente</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="sobre">
+        <h2>Sobre o Agro Forte</h2>
+        <p>Nosso objetivo é unir tecnologia e sustentabilidade para fortalecer a produção agrícola e proteger o meio ambiente.</p>
+    </section>
+
+    <section id="producoes">
+        <h2>Produção Sustentável</h2>
+        <div class="cards-container">
+            <div class="card" onclick="showInfo('soja')">
+                <h3>Soja</h3>
+                <p>Clique para saber mais</p>
+            </div>
+            <div class="card" onclick="showInfo('milho')">
+                <h3>Milho</h3>
+                <p>Clique para saber mais</p>
+            </div>
+            <div class="card" onclick="showInfo('trigo')">
+                <h3>Trigo</h3>
+                <p>Clique para saber mais</p>
+            </div>
+        </div>
+        <div id="info-box"></div>
+    </section>
+
+    <section id="meioambiente">
+        <h2>Meio Ambiente</h2>
+        <p>Práticas agrícolas conscientes ajudam a preservar o solo, a água e a biodiversidade.</p>
+        <button id="toggle-theme">Mudar Tema</button>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="form-msg"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Agro Forte - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
